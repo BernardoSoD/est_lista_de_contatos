@@ -122,13 +122,11 @@ class _ContactScreenState extends State<ContactScreen> {
                     ),
                     onPressed: isEditing ? () {
                       if (_formKey.currentState.validate()){
-                        if (widget.user != null)
-                          UserModel.UsersList.remove(widget.user);
-                        UserModel(
+                        UserModel.saveOrEdit(
+                          widget.user,
                           _nomeController.text,
                           _emailController.text,
                           _phoneController.text);
-                        UserModel.saveData();
                         Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (context) => HomeScreen())
                         );

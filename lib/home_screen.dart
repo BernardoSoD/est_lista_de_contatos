@@ -34,7 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
               return ListView.builder(
                 itemCount: UserModel.UsersList.length,
                 itemBuilder: (context, index) {
-                  return ContactCard(UserModel.UsersList[index]);
+                  List _reversedList = UserModel.UsersList.reversed.toList();
+                  return ContactCard(_reversedList[index]);
                 }
               );
             }
