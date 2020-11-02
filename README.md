@@ -1,3 +1,3 @@
 # estlistadecontatos
 
-Simples lista de contatos feita em Flutter por BernardoSoD :)
+Simple contacts list made in Flutter by BernardoSoD :)
